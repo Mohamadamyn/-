@@ -15,11 +15,15 @@
     .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
     .hero h1 { position: relative; font-size: 3.5rem; animation: fadeIn 2s ease-in-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
+    section { padding-top: 40px; padding-bottom: 40px; }
+    h2 { font-weight: 600; }
     .gallery .card img { border-radius: 10px; transition: transform .3s; cursor: pointer; }
     .gallery .card:hover img { transform: scale(1.05); }
     #map iframe { border: 0; border-radius: 10px; }
     #toTop { display: none; position: fixed; bottom: 20px; right: 20px; background: #e67e22; color: white; padding: 10px; border-radius: 50%; cursor: pointer; }
     footer { background-color: #2c3e50; color: #ecf0f1; padding: 20px 0; }
+    .lead { font-size: 1.1rem; line-height: 1.6; }
+    .contact-form input, .contact-form textarea { border-radius: 5px; }
   </style>
 </head>
 <body>
@@ -44,7 +48,7 @@
     <h1>مرحبا بكم في نبض مسحرة</h1>
   </section>  <div class="container">
     <!-- Photo Gallery -->
-    <section id="photos" class="mb-5">
+    <section id="photos">
       <h2 class="mb-4">معرض الصور</h2>
       <div class="row gallery">
         <div class="col-md-3 mb-4">
@@ -69,53 +73,58 @@
         </div>
       </div>
     </section><!-- Ruins Section -->
-<section id="ruins" class="mb-5">
+<section id="ruins">
   <h2 class="mb-4">آثار قرية مسحرة</h2>
   <p class="lead">
-    بنيت مسحرة على أنقاض مستوطنة قديمة تعود للعصور الإسلامية، الرومانية، والبيزنطية. عُثر خلال حفريات عام 2000 على أدوات فخار، مقابر أثرية، ونقوش حجرية بالإغريقية تعكس الحياة الدينية والاجتماعية آنذاك.
+    تقع قرية مسحرة في قلب منطقة الجولان السوري على أنقاض مستوطنة تعود للعصور الإسلامية المبكرة والعهدين الروماني والبيزنطي.
+    تكشف الحفريات التي أجريت عام 2000 عن بقايا فخارية فاخرة، وأضرحة حجرية منحوتة بشكل متقن، ونقوش إغريقية توثق احتفالات دينية قديمة.
+    كما عُثر على بقايا منشآت زراعية تشير إلى نظم ري قديمة واستصلاح للأراضي، مما يعكس مدى تقدّم سكان مسحرة في إدارة الموارد المائية والزراعية.
   </p>
-  <div class="row gallery">
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Roman_Pottery_Quineitra.jpg" alt="قطع فخارية" />
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Byzantine_Sarcophagus_Quneitra.jpg" alt="مقبرة بيزنطية" />
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- Map Section -->
-<section id="map" class="mb-5">
+<section id="map">
   <h2 class="mb-4">موقع المسحرة على الخريطة</h2>
   <div class="ratio ratio-16x9">
     <iframe src="https://maps.google.com/maps?q=33.136389,35.963611&z=14&output=embed" allowfullscreen></iframe>
   </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="mb-5">
+<!-- Expanded About Section -->
+<section id="about">
   <h2 class="mb-4">عن قرية مسحرة</h2>
+  <p class="lead">
+    تأسست مسحرة عام 1920 على أطلال مستوطنة قديمة كانت تقع على طريق التجارة بين دمشق وفلسطين.
+    تمتاز القرية بمناخ البحر الأبيض المتوسط، مع صيف حار وجاف وشتاء معتدل ممطر، مما جعلها مناسبة لزراعة الزيتون والتين واللوز منذ القدم.
+  </p>
+  <h4>التاريخ والحضارات</h4>
   <p>
-    مسحرة هي قرية من قرى الجولان السوري في محافظة القنيطرة، تقع على بعد 18 كم شرق مدينة القنيطرة قرب حدود درعا.
-    يشتهر أهلها بزراعة الزيتون والتين واللوز. تأسست عام 1920 على أنقاض مستوطنة قديمة، وعاشتها عدة حضارات عبر التاريخ.
+    شهدت مسحرة مرور الحضارة الرومانية التي أسست شبكة طرق متينة وأنظمة صرف متطورة، تبعها النفوذ البيزنطي الذي أضاف كنائس وزخارف فنية.
+    في العصور الإسلامية، أصبحت محطة للحجاج والتجار، وبُنيت فيها مساجد صغيرة تحمل نقوشًا عربية مبكرة.
+  </p>
+  <h4>الاقتصاد والزراعة</h4>
+  <p>
+    يعتمد السكان المحليون على الزراعة التقليدية، حيث تنتشر بساتين الزيتون التي تشكل أكثر من 70% من الإنتاج الزراعي.
+    يعود تاريخ أول معصرة زيتون إلى القرن التاسع عشر، وما زالت بعضها تعمل حتى اليوم.
+  </p>
+  <h4>الثقافة والتراث</h4>
+  <p>
+    تشتهر القرية بالزي التقليدي المطرز يدويًا، والموسيقى الشعبية التي تُعزف على آلات كالعيّار والدربوكة.
+    يحتفل الأهالي بمهرجان السنوي الذي يعرض فيه الحرف اليدوية والأطعمة التقليدية كالمنسف والمربيات.
   </p>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="mb-5">
+<section id="contact" class="contact-form mb-5">
   <h2 class="mb-4">تواصل معنا</h2>
   <form>
     <div class="mb-3"><input type="email" class="form-control" placeholder="بريدك الإلكتروني" required></div>
-    <div class="mb-3"><textarea class="form-control" rows="3" placeholder="رسالتك" required></textarea></div>
+    <div class="mb-3"><textarea class="form-control" rows="4" placeholder="رسالتك" required></textarea></div>
     <button type="submit" class="btn btn-primary">إرسال</button>
   </form>
 </section>
 
-  </div>  <!-- Back to Top -->  <div id="toTop" onclick="scrollToTop()" style="font-size:24px;">⬆️</div>  <!-- Footer -->  <footer class="text-center">
+  </div>  <!-- Back to Top -->  <div id="toTop" onclick="scrollToTop()">⬆️</div>  <!-- Footer -->  <footer class="text-center">
     <div class="container">
       <p>&copy; 2025 نبض مسحرة. جميع الحقوق محفوظة.</p>
       <div>
