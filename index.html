@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -9,17 +8,16 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Cairo', sans-serif; background-color: #f8f9f9; position: relative; }
+    body { font-family: 'Cairo', sans-serif; background-color: #f8f9f9; }
     .navbar { background-color: #2c3e50; }
     .navbar-brand, .nav-link { color: #ecf0f1 !important; }
-    .hero { position: relative; background: url('') center/cover no-repeat; height: 350px; display: flex; align-items: center; justify-content: center; color: #fff; }
+    .hero { position: relative; background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Quneitra_lookout_view.jpg') center/cover no-repeat; height: 350px; display: flex; align-items: center; justify-content: center; color: #fff; }
     .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
     .hero h1 { position: relative; font-size: 3.5rem; animation: fadeIn 2s ease-in-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
-    .search-bar { max-width: 400px; margin: 20px auto; }
-    .gallery .card img, .videos .card video, .ruins .card img { border-radius: 10px; transition: transform .3s; cursor: pointer; }
-    .gallery .card:hover img, .videos .card:hover video, .ruins .card:hover img { transform: scale(1.05); }
-    .blog-post { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .gallery .card img { border-radius: 10px; transition: transform .3s; cursor: pointer; }
+    .gallery .card:hover img { transform: scale(1.05); }
+    #map iframe { border: 0; border-radius: 10px; }
     #toTop { display: none; position: fixed; bottom: 20px; right: 20px; background: #e67e22; color: white; padding: 10px; border-radius: 50%; cursor: pointer; }
     footer { background-color: #2c3e50; color: #ecf0f1; padding: 20px 0; }
   </style>
@@ -35,142 +33,101 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#photos">الصور</a></li>
-          <li class="nav-item"><a class="nav-link" href="#videos">الفيديوهات</a></li>
           <li class="nav-item"><a class="nav-link" href="#ruins">آثار</a></li>
-          <li class="nav-item"><a class="nav-link" href="#blog">أخبار</a></li>
-          <li class="nav-item"><a class="nav-link" href="#map">خريطة</a></li>
+          <li class="nav-item"><a class="nav-link" href="#map">الخريطة</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">عن القرية</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">تواصل</a></li>
-          <li class="nav-item"><button id="darkModeToggle" class="btn btn-outline-light ms-2">🌙</button></li>
         </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero mb-5">
-    <h1>ترحيب من عدنان المصطفى</h1>
-  </section>
-
-  <div class="container">
-    <!-- Search -->
-    <div class="search-bar input-group">
-      <input id="searchInput" type="text" class="form-control" placeholder="ابحث في الصور والآثار...">
-      <button class="btn btn-primary" onclick="filterItems()">🔍</button>
-    </div>
-
+  </nav>  <!-- Hero Section -->  <section class="hero mb-5">
+    <h1>مرحبا بكم في نبض مسحرة</h1>
+  </section>  <div class="container">
     <!-- Photo Gallery -->
     <section id="photos" class="mb-5">
       <h2 class="mb-4">معرض الصور</h2>
-      <div class="row gallery" id="photoGallery">
-        <div class="col-md-3 mb-4 gallery-item">
+      <div class="row gallery">
+        <div class="col-md-3 mb-4">
           <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Quneitra.jpg" alt="القنيطرة">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Quneitra.jpg" alt="مشهد عام لبلدة مسحرة" />
           </div>
         </div>
-        <!-- إضافة المزيد من العناصر حسب الحاجة -->
-      </div>
-    </section>
-
-    <!-- Video Library -->
-    <section id="videos" class="mb-5">
-      <h2 class="mb-4">مكتبة الفيديو</h2>
-      <div class="row videos">
-        <div class="col-md-4 mb-4">
-          <div class="card"><video controls src="https://www.youtube.com/embed/ZWk7t9-dh8E"></video></div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Long-Distance_View_over_Destroyed_Syrian_Town_of_Quneitra_-_From_Mitzpe_Quneitra_%28Quneitra_Viewpoint%29_-_Golan_Heights_%285707707308%29.jpg" alt="أطلال على تلة المراقبة" />
+          </div>
         </div>
-        <!-- المزيد من الفيديوهات -->
-      </div>
-    </section>
-
-    <!-- Ruins Section -->
-    <section id="ruins" class="mb-5">
-      <h2 class="mb-4">آثار القرية</h2>
-      <div class="row ruins">
-        <div class="col-md-4 mb-4 gallery-item">
-          <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Long-Distance_View_over_Destroyed_Syrian_Town_of_Quneitra_-_From_Mitzpe_Quneitra_%28Quneitra_Viewpoint%29_-_Golan_Heights_%285707707308%29.jpg" alt="تلة المراقبة"></div>
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Main_Street%2C_Quneitra_%2848689507%29.jpg" alt="الشارع الرئيسي" />
+          </div>
         </div>
-        <!-- المزيد من الآثار -->
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Quneitra_building.jpg" alt="بناية أثرية" />
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- Blog/News Section -->
-    <section id="blog" class="mb-5">
-      <h2 class="mb-4">أحدث الأخبار</h2>
-      <div class="blog-post" data-title="عودة زراعة الزيتون في مسحرة">
-        <h4>عودة زراعة الزيتون في مسحرة</h4>
-        <p>في عام 2025، بدأت المبادرة الزراعية لإعادة زراعة أشجار الزيتون في الأراضي المتضررة، بدعم من المجتمع المحلي.</p>
+    </section><!-- Ruins Section -->
+<section id="ruins" class="mb-5">
+  <h2 class="mb-4">آثار قرية مسحرة</h2>
+  <p class="lead">
+    بنيت مسحرة على أنقاض مستوطنة قديمة تعود للعصور الإسلامية، الرومانية، والبيزنطية. عُثر خلال حفريات عام 2000 على أدوات فخار، مقابر أثرية، ونقوش حجرية بالإغريقية تعكس الحياة الدينية والاجتماعية آنذاك.
+  </p>
+  <div class="row gallery">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Roman_Pottery_Quineitra.jpg" alt="قطع فخارية" />
       </div>
-      <div class="blog-post" data-title="تنظيم مهرجان التراث السنوي">
-        <h4>مهرجان التراث السنوي</h4>
-        <p>ينظم سكان مسحرة مهرجانًا سنويًا للاحتفال بالحرف اليدوية والطعام التقليدي، حيث يشارك الزوار من المناطق المجاورة.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Byzantine_Sarcophagus_Quneitra.jpg" alt="مقبرة بيزنطية" />
       </div>
-    </section>
-
-    <!-- Map Section -->
-    <section id="map" class="mb-5">
-      <h2 class="mb-4">موقع مسحرة على الخريطة</h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."></iframe>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="mb-5">
-      <h2 class="mb-4">عن القرية</h2>
-      <p>
-        تقع مسحرة في شرق محافظة القنيطرة على حدود محافظة درعا، وتبعد حوالي 18 كم عن مركز القنيطرة.
-        تشتهر بزراعة الزيتون، والتين، واللوزيات. أُسست عام 1920 على أنقاض مستوطنة قديمة تضم مقابر ورموز تاريخية متنوعة.
-      </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="mb-5">
-      <h2 class="mb-4">تواصل معنا</h2>
-      <form>
-        <div class="mb-3"><input type="email" class="form-control" placeholder="بريدك الإلكتروني"></div>
-        <div class="mb-3"><textarea class="form-control" rows="3" placeholder="رسالتك"></textarea></div>
-        <button type="submit" class="btn btn-primary">إرسال</button>
-      </form>
-    </section>
+    </div>
   </div>
+</section>
 
-  <!-- Back to Top -->
-  <div id="toTop" onclick="scrollToTop()">⬆️</div>
+<!-- Map Section -->
+<section id="map" class="mb-5">
+  <h2 class="mb-4">موقع المسحرة على الخريطة</h2>
+  <div class="ratio ratio-16x9">
+    <iframe src="https://maps.google.com/maps?q=33.136389,35.963611&z=14&output=embed" allowfullscreen></iframe>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center">
+<!-- About Section -->
+<section id="about" class="mb-5">
+  <h2 class="mb-4">عن قرية مسحرة</h2>
+  <p>
+    مسحرة هي قرية من قرى الجولان السوري في محافظة القنيطرة، تقع على بعد 18 كم شرق مدينة القنيطرة قرب حدود درعا.
+    يشتهر أهلها بزراعة الزيتون والتين واللوز. تأسست عام 1920 على أنقاض مستوطنة قديمة، وعاشتها عدة حضارات عبر التاريخ.
+  </p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="mb-5">
+  <h2 class="mb-4">تواصل معنا</h2>
+  <form>
+    <div class="mb-3"><input type="email" class="form-control" placeholder="بريدك الإلكتروني" required></div>
+    <div class="mb-3"><textarea class="form-control" rows="3" placeholder="رسالتك" required></textarea></div>
+    <button type="submit" class="btn btn-primary">إرسال</button>
+  </form>
+</section>
+
+  </div>  <!-- Back to Top -->  <div id="toTop" onclick="scrollToTop()" style="font-size:24px;">⬆️</div>  <!-- Footer -->  <footer class="text-center">
     <div class="container">
       <p>&copy; 2025 نبض مسحرة. جميع الحقوق محفوظة.</p>
       <div>
-        <a href="#" class="text-light me-2">فيسبوك</a>
-        <a href="#" class="text-light me-2">تويتر</a>
-        <a href="#" class="text-light">انستجرام</a>
+        <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%AD%D8%B1%D8%A9" class="text-light me-2" target="_blank">بيانات ويكي</a>
+        <a href="https://maps.google.com/?q=33.136389,35.963611" class="text-light">عرض في Google Maps</a>
       </div>
     </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Dark Mode Toggle
-    document.getElementById('darkModeToggle').addEventListener('click', () => {
-      document.body.classList.toggle('bg-dark');
-      document.body.classList.toggle('text-light');
-    });
+  </footer>  <!-- Bootstrap JS -->  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  <script>
     // Back to Top
     window.addEventListener('scroll', () => {
       document.getElementById('toTop').style.display = window.scrollY > 200 ? 'block' : 'none';
     });
     function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
-    // Search filter
-    function filterItems() {
-      const filter = document.getElementById('searchInput').value.toLowerCase();
-      document.querySelectorAll('.gallery-item, .blog-post').forEach(el => {
-        const title = el.dataset.title || '';
-        el.style.display = title.toLowerCase().includes(filter) ? '' : 'none';
-      });
-    }
-  </script>
-</body>
+  </script></body>
 </html>
