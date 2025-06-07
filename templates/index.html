@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>نبض مسحرة</title>
+    <style>
+        body { font-family: Arial; background: #f8f8f8; text-align: center; padding: 30px; }
+        .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .item { width: 300px; border: 1px solid #ccc; padding: 10px; background: white; border-radius: 10px; }
+        .item img, .item video { width: 100%; height: auto; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <marquee style="color: red; font-size: 20px;">عدنان المصطفى</marquee>
+    <h1>📸 موقع نبض مسحرة</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="media" accept="image/*,video/*" required>
+        <button type="submit">📤 رفع</button>
+    </form>
+
+    <div class="gallery">
+        {% for file in files %}
+            <div class="item">
+                {% if file.endswith('.mp4') or file.endswith('.webm') or file.endswith('.ogg') %}
+                    <video controls src="{{ url_for('static', filename='uploads/' + file) }}"></video>
+                {% else %}
+                    <img src="{{ url_for('static', filename='uploads/' + file) }}" alt="media">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
