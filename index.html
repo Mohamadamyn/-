@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نبض مسحرة - عائلات ذات أصول قرشية</title>
-  <meta name="description" content="موقع قرية مسحرة التراثية - اكتشف تاريخنا العريق وعائلاتنا الأصيلة">
+  <title>نبض مسحرة - تراث وتاريخ</title>
+  <meta name="description" content="موقع قرية مسحرة التراثية - اكتشف تاريخنا العريق">
   
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
       background-color: var(--light-color);
       color: var(--text-color);
       overflow-x: hidden;
-      background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') center/cover no-repeat fixed;
+      background: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat fixed;
       background-color: rgba(245, 245, 245, 0.95);
       background-blend-mode: lighten;
     }
@@ -453,6 +453,31 @@
       transform: translateY(0);
     }
     
+    /* Welcome Box */
+    .welcome-box {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 600px;
+      border: 3px solid var(--gold-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .welcome-box h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .welcome-box .phone {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold-color);
+      margin: 20px 0;
+    }
+    
     /* Responsive */
     @media (max-width: 992px) {
       .hero h1 {
@@ -476,6 +501,10 @@
       .section-title {
         font-size: 1.8rem;
       }
+      
+      .welcome-box {
+        padding: 20px;
+      }
     }
     
     @media (max-width: 576px) {
@@ -489,6 +518,10 @@
       
       .section-title {
         font-size: 1.5rem;
+      }
+      
+      .welcome-box .phone {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -532,11 +565,21 @@
     <div class="container">
       <div class="content">
         <h1 class="animate__animated animate__fadeInDown">اكتشف عراقة قرية مسحرة</h1>
-        <p class="animate__animated animate__fadeIn animate__delay-1s">موطن العائلات القرشية الأصيلة التي تعود أصولها إلى الشيخ سعد الدين الجباوي</p>
-        <a href="#families" class="btn btn-cta animate__animated animate__fadeInUp animate__delay-1s">اكتشف العائلات <i class="fas fa-arrow-left ms-2"></i></a>
+        <p class="animate__animated animate__fadeIn animate__delay-1s">موطن التراث والتاريخ العريق</p>
+        <a href="#photos" class="btn btn-cta animate__animated animate__fadeInUp animate__delay-1s">اكتشف القرية <i class="fas fa-arrow-left ms-2"></i></a>
       </div>
     </div>
   </section>
+  
+  <!-- Welcome Box -->
+  <div class="welcome-box animate-on-scroll">
+    <h3>نرحب بكم في موقع قرية مسحرة التراثية</h3>
+    <p>يسعدنا أن نقدم لكم ترحيباً خاصاً من أم عدان المصطفى التي تعمل جاهدةً للحفاظ على تراث وتاريخ قرية مسحرة العريقة</p>
+    <div class="phone">
+      <i class="fas fa-phone me-2"></i>+963 998 440 194
+    </div>
+    <p>تواصلوا معنا للمزيد من المعلومات عن تاريخ القرية وآثارها</p>
+  </div>
   
   <!-- Photo Gallery -->
   <section id="photos" class="py-5">
@@ -545,22 +588,22 @@
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="مسجد القرية" class="img-fluid">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="الآثار القديمة" class="img-fluid">
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1580502304784-8985b7eb7260?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الطراز المعماري" class="img-fluid">
+            <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="المنازل الأثرية" class="img-fluid">
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1574950578143-858c6fc589b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الزيتون" class="img-fluid">
+            <img src="https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="الطرق التراثية" class="img-fluid">
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1603361513137-73d6394a54aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="التراث" class="img-fluid">
+            <img src="https://images.unsplash.com/photo-1580502304784-8985b7eb7260?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="المسجد القديم" class="img-fluid">
           </div>
         </div>
       </div>
@@ -574,7 +617,7 @@
       <div class="row">
         <div class="col-lg-6 mb-4">
           <div class="card animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="القلعة القديمة">
+            <img src="https://images.unsplash.com/photo-1580554530778-ca36943938b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="القلعة القديمة">
             <div class="card-body">
               <h5 class="card-title">القلعة القديمة</h5>
               <p class="card-text">قلعة تاريخية تعود للقرن الثاني عشر الميلادي، شاهد على عراقة القرية وأهميتها الاستراتيجية.</p>
@@ -583,7 +626,7 @@
         </div>
         <div class="col-lg-6 mb-4">
           <div class="card animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="النقوش الأثرية">
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="النقوش الأثرية">
             <div class="card-body">
               <h5 class="card-title">النقوش الأثرية</h5>
               <p class="card-text">نقوش حجرية تعود للعصر الأموي تحكي قصة القرية وتاريخها العريق.</p>
@@ -598,7 +641,7 @@
   <section id="families" class="families-section">
     <div class="container">
       <h2 class="section-title animate-on-scroll">عائلات القرية الأصيلة</h2>
-      <p class="text-center mb-5 lead animate-on-scroll">عائلات قرشية تعود أصولها إلى الشيخ سعد الدين الجباوي رحمه الله</p>
+      <p class="text-center mb-5 lead animate-on-scroll">عائلات تعود أصولها إلى قرية مسحرة العريقة</p>
       
       <div class="row">
         <!-- Family 1 -->
@@ -689,7 +732,7 @@
             </div>
           </div>
           <div class="col-md-8">
-            <p class="lead">هو الشيخ سعد الدين بن أحمد الجباوي، عالم دين وقاضٍ معروف، قدم من منطقة الحجاز في المملكة العربية السعودية واستقر في قرية مسحرة في القرن الثالث عشر الميلادي. يعود نسبه إلى قبيلة قريش العريقة.</p>
+            <p class="lead">هو الشيخ سعد الدين بن أحمد الجباوي، عالم دين وقاضٍ معروف، قدم من منطقة الحجاز في المملكة العربية السعودية واستقر في قرية مسحرة في القرن الثالث عشر الميلادي.</p>
             <p>اشتهر بالورع والعلم والكرم، وكان له دور كبير في نشر العلم وتأسيس المساجد والمدارس في القرية والمناطق المحيطة. توفي رحمه الله عام 1285م ودفن في القرية حيث لا يزال ضريحه مزاراً لأهالي القرية والزوار.</p>
           </div>
         </div>
@@ -740,7 +783,7 @@
       <h2 class="section-title animate-on-scroll">عن قرية مسحرة</h2>
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 animate-on-scroll">
-          <img src="https://images.unsplash.com/photo-1580554530778-ca36943938b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="قرية مسحرة" class="img-fluid rounded shadow">
+          <img src="https://images.unsplash.com/photo-1603361513137-73d6394a54aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="قرية مسحرة" class="img-fluid rounded shadow">
         </div>
         <div class="col-lg-6 mb-4 animate-on-scroll">
           <h3>قرية ذات تاريخ عريق</h3>
@@ -783,8 +826,8 @@
               <input type="text" class="form-control" id="name" required>
             </div>
             <div class="col-md-6">
-              <label for="email" class="form-label">البريد الإلكتروني</label>
-              <input type="email" class="form-control" id="email" required>
+              <label for="phone" class="form-label">رقم الهاتف</label>
+              <input type="tel" class="form-control" id="phone" required>
             </div>
             <div class="col-12">
               <label for="subject" class="form-label">الموضوع</label>
@@ -811,7 +854,9 @@
           <h5><i class="fas fa-landmark me-2"></i> نبض مسحرة</h5>
           <p>بوابة التعريف بالقرية التراثية التي تحكي تاريخًا عريقًا وحضارةً ضاربة في القدم.</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/share/19Xak1veaQ/?mibextid=qi2Omg" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
@@ -840,8 +885,8 @@
           <h5>معلومات الاتصال</h5>
           <ul class="footer-links">
             <li><i class="fas fa-map-marker-alt me-2"></i> قرية مسحرة، سوريا</li>
-            <li><i class="fas fa-phone me-2"></i> +963 11 1234567</li>
-            <li><i class="fas fa-envelope me-2"></i> info@mashara.com</li>
+            <li><i class="fas fa-phone me-2"></i> +963 998 440 194</li>
+            <li><i class="fas fa-user me-2"></i> أم عدان المصطفى</li>
           </ul>
         </div>
       </div>
