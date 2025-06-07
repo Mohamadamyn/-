@@ -8,22 +8,113 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Cairo', sans-serif; background-color: #f8f9f9; }
-    .navbar { background-color: #2c3e50; }
-    .navbar-brand, .nav-link { color: #ecf0f1 !important; }
-    .hero { position: relative; background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Quneitra_lookout_view.jpg') center/cover no-repeat; height: 350px; display: flex; align-items: center; justify-content: center; color: #fff; }
-    .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
-    .hero h1 { position: relative; font-size: 3.5rem; animation: fadeIn 2s ease-in-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
-    section { padding-top: 40px; padding-bottom: 40px; }
-    h2 { font-weight: 600; }
-    .gallery .card img { border-radius: 10px; transition: transform .3s; cursor: pointer; }
-    .gallery .card:hover img { transform: scale(1.05); }
-    #map iframe { border: 0; border-radius: 10px; }
-    #toTop { display: none; position: fixed; bottom: 20px; right: 20px; background: #e67e22; color: white; padding: 10px; border-radius: 50%; cursor: pointer; }
-    footer { background-color: #2c3e50; color: #ecf0f1; padding: 20px 0; }
-    .lead { font-size: 1.1rem; line-height: 1.6; }
-    .contact-form input, .contact-form textarea { border-radius: 5px; }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f9f9;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #2c3e50;
+      animation: slideDown 0.8s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+    .navbar-brand, .nav-link { color: #ecf0f1 !important; transition: color 0.3s; }
+    .nav-link:hover { color: #e67e22 !important; }
+    .hero {
+      position: relative;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Quneitra_lookout_view.jpg') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 3.5rem;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    section { padding: 60px 0; }
+    h2 {
+      font-weight: 600;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    #photos h2 { animation-delay: 0.2s; }
+    #ruins h2 { animation-delay: 0.4s; }
+    #map h2 { animation-delay: 0.6s; }
+    #about h2 { animation-delay: 0.8s; }
+    #contact h2 { animation-delay: 1s; }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .gallery .card img, .ruins .card img {
+      border-radius: 10px;
+      transition: transform 0.5s, filter 0.5s;
+      filter: grayscale(20%);
+    }
+    .gallery .card:hover img, .ruins .card:hover img {
+      transform: scale(1.1) rotate(1deg);
+      filter: grayscale(0);
+    }
+    #map iframe {
+      border: 0;
+      border-radius: 10px;
+      animation: fadeInMap 1s ease-in-out;
+    }
+    @keyframes fadeInMap { from { opacity: 0; } to { opacity: 1; } }
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0;
+      animation: slideInLeft 1s forwards;
+      animation-delay: 1.2s;
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .contact-form input, .contact-form textarea {
+      border-radius: 5px;
+      transition: box-shadow 0.3s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      box-shadow: 0 0 8px rgba(230,126,34,0.6);
+      outline: none;
+    }
+    #toTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e67e22;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      animation: fadeIn 1s;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
   </style>
 </head>
 <body>
@@ -49,7 +140,7 @@
   </section>  <div class="container">
     <!-- Photo Gallery -->
     <section id="photos">
-      <h2 class="mb-4">معرض الصور</h2>
+      <h2 class="text-center mb-4">معرض الصور</h2>
       <div class="row gallery">
         <div class="col-md-3 mb-4">
           <div class="card">
@@ -74,69 +165,8 @@
       </div>
     </section><!-- Ruins Section -->
 <section id="ruins">
-  <h2 class="mb-4">آثار قرية مسحرة</h2>
+  <h2 class="text-center mb-4">آثار قرية مسحرة</h2>
   <p class="lead">
     تقع قرية مسحرة في قلب منطقة الجولان السوري على أنقاض مستوطنة تعود للعصور الإسلامية المبكرة والعهدين الروماني والبيزنطي.
-    تكشف الحفريات التي أجريت عام 2000 عن بقايا فخارية فاخرة، وأضرحة حجرية منحوتة بشكل متقن، ونقوش إغريقية توثق احتفالات دينية قديمة.
-    كما عُثر على بقايا منشآت زراعية تشير إلى نظم ري قديمة واستصلاح للأراضي، مما يعكس مدى تقدّم سكان مسحرة في إدارة الموارد المائية والزراعية.
-  </p>
-</section>
+    تكشف الحفريات التي أجريت عام 2000 عن بقايا فخارية فاخرة، وأضرح
 
-<!-- Map Section -->
-<section id="map">
-  <h2 class="mb-4">موقع المسحرة على الخريطة</h2>
-  <div class="ratio ratio-16x9">
-    <iframe src="https://maps.google.com/maps?q=33.136389,35.963611&z=14&output=embed" allowfullscreen></iframe>
-  </div>
-</section>
-
-<!-- Expanded About Section -->
-<section id="about">
-  <h2 class="mb-4">عن قرية مسحرة</h2>
-  <p class="lead">
-    تأسست مسحرة عام 1920 على أطلال مستوطنة قديمة كانت تقع على طريق التجارة بين دمشق وفلسطين.
-    تمتاز القرية بمناخ البحر الأبيض المتوسط، مع صيف حار وجاف وشتاء معتدل ممطر، مما جعلها مناسبة لزراعة الزيتون والتين واللوز منذ القدم.
-  </p>
-  <h4>التاريخ والحضارات</h4>
-  <p>
-    شهدت مسحرة مرور الحضارة الرومانية التي أسست شبكة طرق متينة وأنظمة صرف متطورة، تبعها النفوذ البيزنطي الذي أضاف كنائس وزخارف فنية.
-    في العصور الإسلامية، أصبحت محطة للحجاج والتجار، وبُنيت فيها مساجد صغيرة تحمل نقوشًا عربية مبكرة.
-  </p>
-  <h4>الاقتصاد والزراعة</h4>
-  <p>
-    يعتمد السكان المحليون على الزراعة التقليدية، حيث تنتشر بساتين الزيتون التي تشكل أكثر من 70% من الإنتاج الزراعي.
-    يعود تاريخ أول معصرة زيتون إلى القرن التاسع عشر، وما زالت بعضها تعمل حتى اليوم.
-  </p>
-  <h4>الثقافة والتراث</h4>
-  <p>
-    تشتهر القرية بالزي التقليدي المطرز يدويًا، والموسيقى الشعبية التي تُعزف على آلات كالعيّار والدربوكة.
-    يحتفل الأهالي بمهرجان السنوي الذي يعرض فيه الحرف اليدوية والأطعمة التقليدية كالمنسف والمربيات.
-  </p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact-form mb-5">
-  <h2 class="mb-4">تواصل معنا</h2>
-  <form>
-    <div class="mb-3"><input type="email" class="form-control" placeholder="بريدك الإلكتروني" required></div>
-    <div class="mb-3"><textarea class="form-control" rows="4" placeholder="رسالتك" required></textarea></div>
-    <button type="submit" class="btn btn-primary">إرسال</button>
-  </form>
-</section>
-
-  </div>  <!-- Back to Top -->  <div id="toTop" onclick="scrollToTop()">⬆️</div>  <!-- Footer -->  <footer class="text-center">
-    <div class="container">
-      <p>&copy; 2025 نبض مسحرة. جميع الحقوق محفوظة.</p>
-      <div>
-        <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%AD%D8%B1%D8%A9" class="text-light me-2" target="_blank">بيانات ويكي</a>
-        <a href="https://maps.google.com/?q=33.136389,35.963611" class="text-light">عرض في Google Maps</a>
-      </div>
-    </div>
-  </footer>  <!-- Bootstrap JS -->  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  <script>
-    // Back to Top
-    window.addEventListener('scroll', () => {
-      document.getElementById('toTop').style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-    function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
-  </script></body>
-</html>
