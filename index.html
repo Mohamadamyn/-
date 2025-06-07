@@ -443,6 +443,7 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 400px;
     }
     
     /* Contact Section */
@@ -465,6 +466,98 @@
       margin: 0 auto 20px;
       color: white;
       font-size: 1.5rem;
+    }
+    
+    /* Prayer Times */
+    .prayer-times {
+      background: rgba(31, 54, 72, 0.9);
+      color: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .prayer-time-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+    
+    .prayer-time-card.active {
+      background: var(--gold-color);
+      transform: scale(1.05);
+    }
+    
+    .prayer-time-card h5 {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    
+    .prayer-time-card .time {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    /* Calendar Section */
+    .calendar-section {
+      background: linear-gradient(to bottom, #f9f9f9, #e8e8e8);
+      padding: 60px 0;
+    }
+    
+    .calendar-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 30px;
+      height: 100%;
+    }
+    
+    .calendar-title {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--gold-color);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .hijri-date, .gregorian-date {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    
+    .current-time {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--gold-color);
+      margin-bottom: 20px;
+    }
+    
+    .calendar-details {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    
+    .calendar-details div {
+      text-align: center;
+    }
+    
+    .calendar-details .label {
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+    
+    .calendar-details .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
     }
     
     /* Footer */
@@ -560,6 +653,14 @@
       .section-title {
         font-size: 1.8rem;
       }
+      
+      .hijri-date, .gregorian-date {
+        font-size: 1.5rem;
+      }
+      
+      .current-time {
+        font-size: 2.2rem;
+      }
     }
     
     @media (max-width: 576px) {
@@ -612,7 +713,10 @@
           <li class="nav-item"><a class="nav-link" href="#photos">معرض الصور</a></li>
           <li class="nav-item"><a class="nav-link" href="#history">تاريخ القرية</a></li>
           <li class="nav-item"><a class="nav-link" href="#families">عائلات القرية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prayer">مواقيت الصلاة</a></li>
+          <li class="nav-item"><a class="nav-link" href="#calendar">التقويم</a></li>
           <li class="nav-item"><a class="nav-link" href="#stats">إحصائيات</a></li>
+          <li class="nav-item"><a class="nav-link" href="#map">موقع القرية</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
         </ul>
       </div>
@@ -799,12 +903,9 @@
       <div class="gold-border mt-5 animate-on-scroll">
         <h4 class="text-center mb-4">الشيخ سعد الدين الجباوي</h4>
         <div class="row align-items-center">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
-            <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الشيخ سعد الدين الجباوي" class="img-fluid rounded-circle border border-3 border-gold" style="width: 200px; height: 200px; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <p class="lead">هو الشيخ سعد الدين بن أحمد الجباوي القرشي، عالم دين وقاضٍ معروف، ولد في مكة المكرمة عام 1205م. قدم إلى بلاد الشام في منتصف القرن الثالث عشر الميلادي واستقر في قرية مسحرة. يعود نسبه إلى قبيلة قريش من ذرية عبد الله بن عباس رضي الله عنهما.</p>
-            <p>اشتهر بالورع والعلم والكرم، وكان له دور كبير في نشر العلم وتأسيس المساجد والمدارس في القرية والمناطق المحيطة. توفي رحمه الله عام 1285م ودفن في القرية حيث لا يزال ضريحه مزاراً لأهالي القرية والزوار. ترك وراءه إرثاً علمياً كبيراً ومخطوطات في الفقه والتفسير لا تزال محفوظة في مكتبة المسجد.</p>
+          <div class="col-12">
+            <p class="lead text-center">هو الشيخ سعد الدين بن أحمد الجباوي القرشي، عالم دين وقاضٍ معروف، ولد في مكة المكرمة عام 1205م. قدم إلى بلاد الشام في منتصف القرن الثالث عشر الميلادي واستقر في قرية مسحرة. يعود نسبه إلى قبيلة قريش من ذرية عبد الله بن عباس رضي الله عنهما.</p>
+            <p class="text-center">اشتهر بالورع والعلم والكرم، وكان له دور كبير في نشر العلم وتأسيس المساجد والمدارس في القرية والمناطق المحيطة. توفي رحمه الله عام 1285م ودفن في القرية حيث لا يزال ضريحه مزاراً لأهالي القرية والزوار. ترك وراءه إرثاً علمياً كبيراً ومخطوطات في الفقه والتفسير لا تزال محفوظة في مكتبة المسجد.</p>
           </div>
         </div>
       </div>
@@ -847,6 +948,116 @@
     </div>
   </section>
   
+  <!-- Prayer Times Section -->
+  <section id="prayer" class="py-5">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">مواقيت الصلاة في مسحرة</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="prayer-times animate-on-scroll">
+            <div class="row text-center">
+              <div class="col-md-4 mb-4">
+                <div class="prayer-time-card" id="fajr-card">
+                  <h5>الفجر</h5>
+                  <div class="time" id="fajr-time">04:32</div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="prayer-time-card" id="sunrise-card">
+                  <h5>الشروق</h5>
+                  <div class="time" id="sunrise-time">05:47</div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="prayer-time-card" id="dhuhr-card">
+                  <h5>الظهر</h5>
+                  <div class="time" id="dhuhr-time">12:35</div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="prayer-time-card" id="asr-card">
+                  <h5>العصر</h5>
+                  <div class="time" id="asr-time">16:15</div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="prayer-time-card" id="maghrib-card">
+                  <h5>المغرب</h5>
+                  <div class="time" id="maghrib-time">19:22</div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="prayer-time-card" id="isha-card">
+                  <h5>العشاء</h5>
+                  <div class="time" id="isha-time">20:47</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <p class="mb-0">تحديث المواقيت حسب التوقيت المحلي لقرية مسحرة، سوريا</p>
+              <p id="prayer-date" class="mb-0">السبت 1 محرم 1446 هـ - 6 يوليو 2024 م</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Calendar Section -->
+  <section id="calendar" class="calendar-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">التقويم الزمني</h2>
+      
+      <div class="row">
+        <div class="col-md-6 mb-4 animate-on-scroll">
+          <div class="calendar-card">
+            <h3 class="calendar-title">التاريخ الهجري</h3>
+            <div class="hijri-date" id="hijri-date">السبت 1 محرم 1446 هـ</div>
+            <div class="current-time" id="hijri-time">--:--:--</div>
+            <div class="calendar-details">
+              <div>
+                <div class="value" id="hijri-day">--</div>
+                <div class="label">اليوم</div>
+              </div>
+              <div>
+                <div class="value" id="hijri-month">--</div>
+                <div class="label">الشهر</div>
+              </div>
+              <div>
+                <div class="value" id="hijri-year">--</div>
+                <div class="label">السنة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-4 animate-on-scroll">
+          <div class="calendar-card">
+            <h3 class="calendar-title">التاريخ الميلادي</h3>
+            <div class="gregorian-date" id="gregorian-date">السبت 6 يوليو 2024 م</div>
+            <div class="current-time" id="gregorian-time">--:--:--</div>
+            <div class="calendar-details">
+              <div>
+                <div class="value" id="gregorian-day">--</div>
+                <div class="label">اليوم</div>
+              </div>
+              <div>
+                <div class="value" id="gregorian-month">--</div>
+                <div class="label">الشهر</div>
+              </div>
+              <div>
+                <div class="value" id="gregorian-year">--</div>
+                <div class="label">السنة</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- Statistics Section -->
   <section id="stats" class="py-5 bg-white">
     <div class="container">
@@ -869,14 +1080,14 @@
         <div class="col-md-3 col-6">
           <div class="stats-box animate-on-scroll">
             <i class="fas fa-home icon"></i>
-            <div class="counter" data-target="23">0</div>
+            <div class="counter" data-target="4">0</div>
             <p>عائلات أصلية</p>
           </div>
         </div>
         <div class="col-md-3 col-6">
           <div class="stats-box animate-on-scroll">
             <i class="fas fa-mosque icon"></i>
-            <div class="counter" data-target="6">0</div>
+            <div class="counter" data-target="2">0</div>
             <p>مساجد تاريخية</p>
           </div>
         </div>
@@ -897,6 +1108,23 @@
               <h5 class="card-title text-center">الأنشطة الاقتصادية</h5>
               <canvas id="economyChart" height="250"></canvas>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Map Section -->
+  <section id="map" class="py-5">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">موقع القرية على الخريطة</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="map-container animate-on-scroll">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26591.002135740894!2d36.332326!3d33.516667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMxJzAwLjAiTiAzNsKwMTknNTYuNCJF!5e0!3m2!1sen!2s!4v1717763123912!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="text-center mt-3">
+            <p>قرية مسحرة، محافظة درعا، سوريا</p>
           </div>
         </div>
       </div>
@@ -1009,7 +1237,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p class="mb-0">&copy; 2023 نبض مسحرة. جميع الحقوق محفوظة. | من إعداد وتصميم عدان المصطفى</p>
+        <p class="mb-0">&copy; 2025 نبض مسحرة. جميع الحقوق محفوظة. | من إعداد وتصميم عدان المصطفى</p>
       </div>
     </div>
   </footer>
@@ -1077,6 +1305,94 @@
       });
     }
     
+    // Prayer times calculation (simplified for demonstration)
+    function calculatePrayerTimes() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      
+      // Simplified calculation for demonstration
+      // In a real application, you would use an API or complex calculation
+      const times = {
+        fajr: '04:32',
+        sunrise: '05:47',
+        dhuhr: '12:35',
+        asr: '16:15',
+        maghrib: '19:22',
+        isha: '20:47'
+      };
+      
+      // Update prayer times display
+      document.getElementById('fajr-time').textContent = times.fajr;
+      document.getElementById('sunrise-time').textContent = times.sunrise;
+      document.getElementById('dhuhr-time').textContent = times.dhuhr;
+      document.getElementById('asr-time').textContent = times.asr;
+      document.getElementById('maghrib-time').textContent = times.maghrib;
+      document.getElementById('isha-time').textContent = times.isha;
+      
+      // Highlight current prayer time
+      const prayerCards = document.querySelectorAll('.prayer-time-card');
+      prayerCards.forEach(card => card.classList.remove('active'));
+      
+      const currentTime = hours * 60 + minutes;
+      const prayerTimes = [
+        {id: 'fajr-card', time: 4*60+32},
+        {id: 'dhuhr-card', time: 12*60+35},
+        {id: 'asr-card', time: 16*60+15},
+        {id: 'maghrib-card', time: 19*60+22},
+        {id: 'isha-card', time: 20*60+47}
+      ];
+      
+      let activePrayer = null;
+      for (let i = prayerTimes.length - 1; i >= 0; i--) {
+        if (currentTime >= prayerTimes[i].time) {
+          activePrayer = prayerTimes[i].id;
+          break;
+        }
+      }
+      
+      if (activePrayer) {
+        document.getElementById(activePrayer).classList.add('active');
+      }
+    }
+    
+    // Update Hijri and Gregorian dates
+    function updateDates() {
+      const now = new Date();
+      
+      // Update Gregorian date and time
+      const gregorianOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('gregorian-date').textContent = now.toLocaleDateString('ar-SY', gregorianOptions);
+      
+      const gregorianTime = now.toLocaleTimeString('ar-SY');
+      document.getElementById('gregorian-time').textContent = gregorianTime;
+      
+      document.getElementById('gregorian-day').textContent = now.getDate();
+      document.getElementById('gregorian-month').textContent = now.toLocaleDateString('ar-SY', { month: 'long' });
+      document.getElementById('gregorian-year').textContent = now.getFullYear();
+      
+      // Simplified Hijri date for demonstration
+      // In a real application, use a proper Hijri calendar library
+      const hijriDate = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', {
+        day: 'numeric',
+        month: 'long',
+        weekday: 'long',
+        year: 'numeric'
+      }).format(now);
+      
+      document.getElementById('hijri-date').textContent = hijriDate;
+      document.getElementById('hijri-time').textContent = gregorianTime; // Same time as Gregorian
+      
+      // Extract Hijri day, month, year (simplified)
+      const hijriParts = hijriDate.split(' ');
+      document.getElementById('hijri-day').textContent = hijriParts[1];
+      document.getElementById('hijri-month').textContent = hijriParts[2];
+      document.getElementById('hijri-year').textContent = hijriParts[4].replace('هـ', '');
+      
+      // Update prayer date display
+      document.getElementById('prayer-date').textContent = hijriDate + ' - ' + now.toLocaleDateString('ar-SY');
+    }
+    
     // Initialize
     window.addEventListener('load', function() {
       // Start counters when stats section is visible
@@ -1096,6 +1412,13 @@
       // Check animation on scroll
       window.addEventListener('scroll', checkAnimation);
       checkAnimation(); // Check on load
+      
+      // Calculate and update prayer times
+      calculatePrayerTimes();
+      
+      // Update dates and time
+      updateDates();
+      setInterval(updateDates, 1000);
       
       // Initialize charts
       // Family Distribution Chart
