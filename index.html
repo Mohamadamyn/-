@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نبض مسحرة - عائلات ذات أصول قرشية</title>
-  <meta name="description" content="موقع قرية مسحرة التراثية - اكتشف تاريخنا العريق وعائلاتنا الأصيلة">
+  <title>قرية مسحرة - الموقع الرسمي</title>
   
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,8 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Animate CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   
   <style>
     :root {
@@ -30,12 +27,9 @@
       background-color: var(--light-color);
       color: var(--text-color);
       overflow-x: hidden;
-      background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') center/cover no-repeat fixed;
-      background-color: rgba(245, 245, 245, 0.95);
-      background-blend-mode: lighten;
     }
     
-    /* Progress bar */
+    /* Progress Bar */
     #progress-container {
       position: fixed;
       top: 0;
@@ -53,7 +47,7 @@
       transition: width 0.1s;
     }
     
-    /* Scroll to top button */
+    /* Scroll to Top Button */
     #scrollToTop {
       position: fixed;
       bottom: 30px;
@@ -126,19 +120,13 @@
     /* Hero Section */
     .hero {
       position: relative;
-      background: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: -72px;
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
     }
     
     .hero .content {
@@ -153,7 +141,6 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-      animation: fadeInDown 1s;
     }
     
     .hero p {
@@ -162,7 +149,6 @@
       max-width: 700px;
       margin-right: auto;
       margin-left: auto;
-      animation: fadeIn 1.5s;
     }
     
     /* Buttons */
@@ -174,7 +160,6 @@
       font-weight: 600;
       border: none;
       transition: all 0.3s;
-      animation: fadeInUp 1s;
     }
     
     .btn-cta:hover {
@@ -214,258 +199,6 @@
       margin-right: auto;
       margin-left: auto;
       left: 0;
-    }
-    
-    .gold-border {
-      border: 3px solid var(--gold-color);
-      border-radius: 10px;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.9);
-    }
-    
-    /* Welcome Banner */
-    .welcome-banner {
-      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .welcome-banner h4 {
-      margin: 0;
-      font-weight: 600;
-      position: relative;
-      z-index: 2;
-    }
-    
-    .welcome-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80') center/cover;
-      opacity: 0.2;
-    }
-    
-    /* Gallery */
-    .gallery-item {
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s;
-      margin-bottom: 20px;
-    }
-    
-    .gallery-item img {
-      transition: transform 0.5s;
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-    
-    .gallery-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-    
-    /* Stats */
-    .stats-box {
-      background: white;
-      padding: 30px 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s;
-      margin-bottom: 20px;
-      height: 100%;
-    }
-    
-    .stats-box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    
-    .stats-box .icon {
-      font-size: 2.5rem;
-      color: var(--gold-color);
-      margin-bottom: 15px;
-    }
-    
-    .stats-box .counter {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 5px;
-    }
-    
-    /* Families Section */
-    .families-section {
-      background: linear-gradient(rgba(245, 245, 245, 0.95), rgba(245, 245, 245, 0.95)), 
-                  url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80') center/cover;
-      padding: 80px 0;
-    }
-    
-    .family-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: all 0.3s;
-      height: 100%;
-      border-top: 5px solid var(--gold-color);
-    }
-    
-    .family-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
-    
-    .family-card .card-header {
-      background: var(--primary-color);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.4rem;
-    }
-    
-    .family-card .card-body {
-      padding: 25px;
-    }
-    
-    .family-card .family-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid var(--gold-color);
-      margin: -70px auto 20px;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: var(--primary-color);
-    }
-    
-    .family-card .family-badge {
-      background: var(--gold-color);
-      color: white;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-    
-    .family-tree {
-      background: rgba(193, 155, 98, 0.1);
-      border-left: 3px solid var(--gold-color);
-      padding: 15px;
-      border-radius: 0 10px 10px 0;
-      margin: 20px 0;
-    }
-    
-    /* Village History */
-    .history-section {
-      background: url('https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      position: relative;
-    }
-    
-    .history-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(31, 54, 72, 0.85);
-    }
-    
-    .history-content {
-      position: relative;
-      color: white;
-      padding: 60px 0;
-    }
-    
-    .history-item {
-      margin-bottom: 30px;
-      padding: 20px;
-      border-right: 3px solid var(--gold-color);
-      transition: all 0.3s;
-    }
-    
-    .history-item:hover {
-      background: rgba(193, 155, 98, 0.2);
-      transform: translateX(-10px);
-    }
-    
-    /* Cards */
-    .card {
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s;
-      height: 100%;
-    }
-    
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
-    }
-    
-    .card-body {
-      padding: 20px;
-    }
-    
-    .card-title {
-      color: var(--primary-color);
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    
-    /* Map */
-    .map-container {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      height: 400px;
-    }
-    
-    /* Contact Section */
-    .contact-card {
-      border: 2px solid var(--gold-color);
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    
-    .contact-icon {
-      width: 60px;
-      height: 60px;
-      background: var(--gold-color);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      color: white;
-      font-size: 1.5rem;
     }
     
     /* Prayer Times */
@@ -560,6 +293,66 @@
       color: var(--primary-color);
     }
     
+    /* Stats */
+    .stats-box {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      margin-bottom: 20px;
+      height: 100%;
+    }
+    
+    .stats-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .stats-box .icon {
+      font-size: 2.5rem;
+      color: var(--gold-color);
+      margin-bottom: 15px;
+    }
+    
+    .stats-box .counter {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+    
+    /* Map */
+    .map-container {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 400px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      border: 2px solid var(--gold-color);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--gold-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
     /* Footer */
     .footer {
       background: var(--primary-color);
@@ -618,18 +411,6 @@
       text-align: center;
     }
     
-    /* Animations */
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s;
-    }
-    
-    .animate-on-scroll.animated {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
     /* Responsive */
     @media (max-width: 992px) {
       .hero h1 {
@@ -665,7 +446,7 @@
     
     @media (max-width: 576px) {
       .hero {
-        height: 80vh;
+        height: 70vh;
       }
       
       .hero h1 {
@@ -674,10 +455,6 @@
       
       .section-title {
         font-size: 1.5rem;
-      }
-      
-      .welcome-banner h4 {
-        font-size: 1.1rem;
       }
     }
   </style>
@@ -693,16 +470,11 @@
     <i class="fas fa-arrow-up"></i>
   </div>
   
-  <!-- Welcome Banner -->
-  <div class="welcome-banner animate__animated animate__fadeInDown">
-    <h4>مرحباً بكم في موقع نبض مسحرة - من إعداد وتصميم عدان المصطفى</h4>
-  </div>
-  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <i class="fas fa-landmark me-2"></i>نبض مسحرة
+        <i class="fas fa-landmark me-2"></i>قرية مسحرة
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
@@ -710,9 +482,6 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link" href="#photos">معرض الصور</a></li>
-          <li class="nav-item"><a class="nav-link" href="#history">تاريخ القرية</a></li>
-          <li class="nav-item"><a class="nav-link" href="#families">عائلات القرية</a></li>
           <li class="nav-item"><a class="nav-link" href="#prayer">مواقيت الصلاة</a></li>
           <li class="nav-item"><a class="nav-link" href="#calendar">التقويم</a></li>
           <li class="nav-item"><a class="nav-link" href="#stats">إحصائيات</a></li>
@@ -727,223 +496,9 @@
   <section id="home" class="hero">
     <div class="container">
       <div class="content">
-        <h1 class="animate__animated animate__fadeInDown">اكتشف عراقة قرية مسحرة</h1>
-        <p class="animate__animated animate__fadeIn animate__delay-1s">موطن العائلات القرشية الأصيلة التي تعود أصولها إلى الشيخ سعد الدين الجباوي</p>
-        <a href="#families" class="btn btn-cta animate__animated animate__fadeInUp animate__delay-1s">اكتشف العائلات <i class="fas fa-arrow-left ms-2"></i></a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Photo Gallery -->
-  <section id="photos" class="py-5">
-    <div class="container">
-      <h2 class="section-title animate-on-scroll">معرض الصور</h2>
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="مسجد القرية" class="img-fluid">
-            <div class="p-3 bg-white">
-              <h5>مسجد الشيخ الجباوي</h5>
-              <p class="mb-0">أقدم مساجد القرية، بني في القرن الثالث عشر</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1580502304784-8985b7eb7260?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الطراز المعماري" class="img-fluid">
-            <div class="p-3 bg-white">
-              <h5>البيوت التراثية</h5>
-              <p class="mb-0">عمارة حجرية فريدة تعود للعصر المملوكي</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1574950578143-858c6fc589b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="الزيتون" class="img-fluid">
-            <div class="p-3 bg-white">
-              <h5>بساتين الزيتون</h5>
-              <p class="mb-0">أشجار زيتون معمرة عمرها مئات السنين</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="gallery-item animate-on-scroll">
-            <img src="https://images.unsplash.com/photo-1603361513137-73d6394a54aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="التراث" class="img-fluid">
-            <div class="p-3 bg-white">
-              <h5>سوق القرية القديم</h5>
-              <p class="mb-0">قلب النشاط التجاري في القرية منذ قرون</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- History Section -->
-  <section id="history" class="history-section">
-    <div class="container">
-      <div class="history-content">
-        <h2 class="section-title text-white animate-on-scroll">تاريخ قرية مسحرة</h2>
-        
-        <div class="row">
-          <div class="col-lg-6 animate-on-scroll">
-            <div class="history-item">
-              <h3 class="text-gold">التأسيس والنشأة</h3>
-              <p>تأسست قرية مسحرة في القرن الثالث عشر الميلادي (حوالي عام 1250م) على يد الشيخ سعد الدين الجباوي القرشي الذي قدم من الحجاز. اختار الشيخ هذا الموقع لخصوبة أراضيه ووفرة مياهه، وكونه على طريق القوافل بين دمشق وفلسطين.</p>
-            </div>
-            
-            <div class="history-item">
-              <h3 class="text-gold">العصر المملوكي</h3>
-              <p>ازدهرت القرية في العصر المملوكي (1250-1517م) حيث أصبحت مركزاً دينياً وتعليمياً بفضل مسجد الشيخ الجباوي ومدرسته الدينية. كما ازدهرت الزراعة وخاصة الزيتون واللوز والتين.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-6 animate-on-scroll">
-            <div class="history-item">
-              <h3 class="text-gold">العصر العثماني</h3>
-              <p>خلال العصر العثماني (1517-1918م) حافظت القرية على مكانتها الدينية والتعليمية. تم توسيع المسجد وإضافة مئذنة جديدة. كما ازدهرت التجارة مع المدن المجاورة وخاصة تجارة الزيتون والصابون البلدي.</p>
-            </div>
-            
-            <div class="history-item">
-              <h3 class="text-gold">القرن العشرون</h3>
-              <p>في القرن العشرين، حافظت القرية على طابعها التقليدي مع تحديث بعض الخدمات. تم إنشاء مدرسة ابتدائية عام 1925م، وشبكة مياه عام 1950م. ومع ذلك حافظت العائلات على تراثها وطريقة عيشها التقليدية.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Families Section -->
-  <section id="families" class="families-section">
-    <div class="container">
-      <h2 class="section-title animate-on-scroll">عائلات القرية الأصيلة</h2>
-      <p class="text-center mb-5 lead animate-on-scroll">عائلات قرشية تعود أصولها إلى الشيخ سعد الدين الجباوي رحمه الله</p>
-      
-      <div class="row">
-        <!-- Family 1 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="family-card animate-on-scroll">
-            <div class="card-header">آل الجباوي</div>
-            <div class="family-img">
-              <i class="fas fa-mosque"></i>
-            </div>
-            <div class="card-body">
-              <div class="family-badge">الأصل والنسب</div>
-              <p>أقدم عائلات القرية وأكثرها انتشاراً، تعود أصولها إلى الشيخ سعد الدين الجباوي القرشي الذي قدم من الحجاز في القرن الثالث عشر الميلادي. ينتمي الشيخ إلى قبيلة قريش من ذرية عبد الله بن عباس رضي الله عنهما.</p>
-              
-              <div class="family-tree">
-                <h6>شجرة النسب:</h6>
-                <ul class="mb-0">
-                  <li>الشيخ سعد الدين الجباوي (المؤسس)</li>
-                  <li>عبد الرحمن بن سعد الدين (قاضي دمشق)</li>
-                  <li>محمد بن عبد الرحمن (عالم دين)</li>
-                  <li>أحمد بن محمد (شيخ القرية)</li>
-                </ul>
-              </div>
-              
-              <p class="mb-0"><strong>أعلام العائلة:</strong> الشيخ خالد الجباوي (مفتي المنطقة)، القاضي عبد الله الجباوي (قاضي القضاة في دمشق 1450م)</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Family 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="family-card animate-on-scroll">
-            <div class="card-header">آل القرشي</div>
-            <div class="family-img">
-              <i class="fas fa-book-quran"></i>
-            </div>
-            <div class="card-body">
-              <div class="family-badge">الأصل والنسب</div>
-              <p>من العائلات العريقة التي تعود بأصولها إلى قبيلة قريش في مكة المكرمة، قدمت إلى القرية مع آل الجباوي واستقرت فيها. تربطهم صلة قرابة وثيقة بآل الجباوي من خلال المصاهرات المتعددة عبر القرون.</p>
-              
-              <div class="family-tree">
-                <h6>شجرة النسب:</h6>
-                <ul class="mb-0">
-                  <li>الشيخ عمر القرشي (رفيق الشيخ الجباوي)</li>
-                  <li>يوسف بن عمر القرشي (تاجر معروف)</li>
-                  <li>سليمان بن يوسف (عالم دين)</li>
-                  <li>عبد الله بن سليمان (قائد عسكري)</li>
-                </ul>
-              </div>
-              
-              <p class="mb-0"><strong>أعلام العائلة:</strong> العالم محمد القرشي (مؤلف كتاب "أنساب قريش")، التاجر المعروف حسن القرشي (رئيس غرفة تجارة دمشق 1890م)</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Family 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="family-card animate-on-scroll">
-            <div class="card-header">آل السعودي</div>
-            <div class="family-img">
-              <i class="fas fa-kaaba"></i>
-            </div>
-            <div class="card-body">
-              <div class="family-badge">الأصل والنسب</div>
-              <p>عائلة قدمت من نجد في القرن الرابع عشر الميلادي، ارتبطت بعلاقة مصاهرة مع آل الجباوي واستقرت في القرية. ينتمون إلى قبيلة عنزة، وتربطهم علاقات نسب مع الأسر الحاكمة في نجد والحجاز.</p>
-              
-              <div class="family-tree">
-                <h6>شجرة النسب:</h6>
-                <ul class="mb-0">
-                  <li>الشيخ فيصل السعودي (المؤسس)</li>
-                  <li>سعد بن فيصل السعودي (قائد عسكري)</li>
-                  <li>ناصر بن سعد (تاجر مواشي)</li>
-                  <li>خالد بن ناصر (عالم دين)</li>
-                </ul>
-              </div>
-              
-              <p class="mb-0"><strong>أعلام العائلة:</strong> التاجر الكبير راشد السعودي (صاحب أكبر مزرعة زيتون في المنطقة)، المحدث عبد الرحمن السعودي (مؤلف كتاب "أحاديث القرى الشامية")</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="gold-border mt-5 animate-on-scroll">
-        <h4 class="text-center mb-4">الشيخ سعد الدين الجباوي</h4>
-        <div class="row align-items-center">
-          <div class="col-12">
-            <p class="lead text-center">هو الشيخ سعد الدين بن أحمد الجباوي القرشي، عالم دين وقاضٍ معروف، ولد في مكة المكرمة عام 1205م. قدم إلى بلاد الشام في منتصف القرن الثالث عشر الميلادي واستقر في قرية مسحرة. يعود نسبه إلى قبيلة قريش من ذرية عبد الله بن عباس رضي الله عنهما.</p>
-            <p class="text-center">اشتهر بالورع والعلم والكرم، وكان له دور كبير في نشر العلم وتأسيس المساجد والمدارس في القرية والمناطق المحيطة. توفي رحمه الله عام 1285م ودفن في القرية حيث لا يزال ضريحه مزاراً لأهالي القرية والزوار. ترك وراءه إرثاً علمياً كبيراً ومخطوطات في الفقه والتفسير لا تزال محفوظة في مكتبة المسجد.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row mt-5">
-        <div class="col-md-6 animate-on-scroll">
-          <div class="card h-100">
-            <div class="card-header bg-primary text-white">
-              <h5 class="mb-0">أصول العائلات القرشية</h5>
-            </div>
-            <div class="card-body">
-              <p>تنحدر عائلات قرية مسحرة من أصول قرشية سعودية تعود إلى مكة المكرمة والمدينة المنورة. وقد هاجرت هذه العائلات إلى بلاد الشام في فترات مختلفة:</p>
-              <ul>
-                <li>الهجرة الأولى: في القرن الثالث عشر مع الشيخ سعد الدين الجباوي</li>
-                <li>الهجرة الثانية: في القرن الرابع عشر مع آل السعودي</li>
-                <li>الهجرة الثالثة: في القرن الخامس عشر مع بعض الأسر القرشية من المدينة المنورة</li>
-              </ul>
-              <p>حافظت هذه العائلات على أنسابها وتقاليدها عبر السجلات والوثائق العائلية التي تعود لمئات السنين.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md-6 animate-on-scroll">
-          <div class="card h-100">
-            <div class="card-header bg-primary text-white">
-              <h5 class="mb-0">المصاهرات والروابط</h5>
-            </div>
-            <div class="card-body">
-              <p>تربط بين عائلات القرية علاقات مصاهرة قوية تعود لقرون طويلة:</p>
-              <ul>
-                <li>مصاهرات بين آل الجباوي وآل القرشي منذ القرن الثالث عشر</li>
-                <li>مصاهرات بين آل الجباوي وآل السعودي منذ القرن الرابع عشر</li>
-                <li>مصاهرات مع عائلات قرشية في المدن المجاورة كدمشق وحلب</li>
-              </ul>
-              <p>كما تربطهم علاقات نسب مع بعض الأسر الحاكمة في نجد والحجاز، حيث توجد وثائق تثبت صلة القرابة بينهم وبين بعض أمراء آل سعود في القرون الماضية.</p>
-            </div>
-          </div>
-        </div>
+        <h1>مرحباً بكم في قرية مسحرة</h1>
+        <p>الموقع الرسمي للقرية - خدمات ومعلومات حديثة</p>
+        <a href="#prayer" class="btn btn-cta">مواقيت الصلاة <i class="fas fa-arrow-left ms-2"></i></a>
       </div>
     </div>
   </section>
@@ -951,11 +506,11 @@
   <!-- Prayer Times Section -->
   <section id="prayer" class="py-5">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">مواقيت الصلاة في مسحرة</h2>
+      <h2 class="section-title">مواقيت الصلاة في مسحرة</h2>
       
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <div class="prayer-times animate-on-scroll">
+          <div class="prayer-times">
             <div class="row text-center">
               <div class="col-md-4 mb-4">
                 <div class="prayer-time-card" id="fajr-card">
@@ -1008,10 +563,10 @@
   <!-- Calendar Section -->
   <section id="calendar" class="calendar-section">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">التقويم الزمني</h2>
+      <h2 class="section-title">التقويم الزمني</h2>
       
       <div class="row">
-        <div class="col-md-6 mb-4 animate-on-scroll">
+        <div class="col-md-6 mb-4">
           <div class="calendar-card">
             <h3 class="calendar-title">التاريخ الهجري</h3>
             <div class="hijri-date" id="hijri-date">السبت 1 محرم 1446 هـ</div>
@@ -1033,7 +588,7 @@
           </div>
         </div>
         
-        <div class="col-md-6 mb-4 animate-on-scroll">
+        <div class="col-md-6 mb-4">
           <div class="calendar-card">
             <h3 class="calendar-title">التاريخ الميلادي</h3>
             <div class="gregorian-date" id="gregorian-date">السبت 6 يوليو 2024 م</div>
@@ -1061,53 +616,34 @@
   <!-- Statistics Section -->
   <section id="stats" class="py-5 bg-white">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">قرية مسحرة في أرقام</h2>
+      <h2 class="section-title">معلومات عامة</h2>
       <div class="row">
         <div class="col-md-3 col-6">
-          <div class="stats-box animate-on-scroll">
-            <i class="fas fa-calendar-alt icon"></i>
-            <div class="counter" data-target="770">0</div>
-            <p>سنوات من التاريخ</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stats-box animate-on-scroll">
+          <div class="stats-box">
             <i class="fas fa-users icon"></i>
             <div class="counter" data-target="8500">0</div>
             <p>عدد السكان</p>
           </div>
         </div>
         <div class="col-md-3 col-6">
-          <div class="stats-box animate-on-scroll">
-            <i class="fas fa-home icon"></i>
+          <div class="stats-box">
+            <i class="fas fa-school icon"></i>
             <div class="counter" data-target="4">0</div>
-            <p>عائلات أصلية</p>
+            <p>عدد المدارس</p>
           </div>
         </div>
         <div class="col-md-3 col-6">
-          <div class="stats-box animate-on-scroll">
-            <i class="fas fa-mosque icon"></i>
-            <div class="counter" data-target="2">0</div>
-            <p>مساجد تاريخية</p>
+          <div class="stats-box">
+            <i class="fas fa-hospital icon"></i>
+            <div class="counter" data-target="1">0</div>
+            <p>مركز صحي</p>
           </div>
         </div>
-      </div>
-      
-      <div class="row mt-5">
-        <div class="col-md-6">
-          <div class="card animate-on-scroll">
-            <div class="card-body">
-              <h5 class="card-title text-center">توزيع العائلات</h5>
-              <canvas id="familyChart" height="250"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card animate-on-scroll">
-            <div class="card-body">
-              <h5 class="card-title text-center">الأنشطة الاقتصادية</h5>
-              <canvas id="economyChart" height="250"></canvas>
-            </div>
+        <div class="col-md-3 col-6">
+          <div class="stats-box">
+            <i class="fas fa-store icon"></i>
+            <div class="counter" data-target="32">0</div>
+            <p>محلات تجارية</p>
           </div>
         </div>
       </div>
@@ -1117,10 +653,10 @@
   <!-- Map Section -->
   <section id="map" class="py-5">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">موقع القرية على الخريطة</h2>
+      <h2 class="section-title">موقع القرية على الخريطة</h2>
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="map-container animate-on-scroll">
+          <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26591.002135740894!2d36.332326!3d33.516667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMxJzAwLjAiTiAzNsKwMTknNTYuNCJF!5e0!3m2!1sen!2s!4v1717763123912!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="text-center mt-3">
@@ -1134,10 +670,10 @@
   <!-- Contact Section -->
   <section id="contact" class="py-5">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">تواصل معنا</h2>
+      <h2 class="section-title">تواصل معنا</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <div class="contact-card animate-on-scroll">
+          <div class="contact-card">
             <div class="row text-center">
               <div class="col-md-6 mb-4">
                 <div class="contact-icon">
@@ -1165,14 +701,8 @@
                   <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="family" class="form-label">العائلة (إن وجدت)</label>
-                  <select class="form-select" id="family">
-                    <option value="">اختر العائلة</option>
-                    <option value="الجباوي">آل الجباوي</option>
-                    <option value="القرشي">آل القرشي</option>
-                    <option value="السعودي">آل السعودي</option>
-                    <option value="أخرى">عائلة أخرى</option>
-                  </select>
+                  <label for="email" class="form-label">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" id="email" required>
                 </div>
                 <div class="col-12">
                   <label for="subject" class="form-label">الموضوع</label>
@@ -1198,53 +728,41 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4">
-          <h5><i class="fas fa-landmark me-2"></i> نبض مسحرة</h5>
-          <p>بوابة التعريف بالقرية التراثية التي تحكي تاريخًا عريقًا وحضارةً ضاربة في القدم.</p>
+          <h5><i class="fas fa-landmark me-2"></i> قرية مسحرة</h5>
+          <p>الموقع الرسمي للقرية - خدمات ومعلومات حديثة</p>
           <div class="social-icons">
             <a href="https://www.facebook.com/share/19Xak1veaQ/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
           <h5>روابط سريعة</h5>
           <ul class="footer-links">
             <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#photos">معرض الصور</a></li>
-            <li><a href="#history">تاريخ القرية</a></li>
-            <li><a href="#families">عائلات القرية</a></li>
+            <li><a href="#prayer">مواقيت الصلاة</a></li>
+            <li><a href="#calendar">التقويم</a></li>
+            <li><a href="#map">موقع القرية</a></li>
             <li><a href="#contact">تواصل معنا</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5>العائلات</h5>
-          <ul class="footer-links">
-            <li><a href="#families">آل الجباوي</a></li>
-            <li><a href="#families">آل القرشي</a></li>
-            <li><a href="#families">آل السعودي</a></li>
-            <li><a href="#families">الشيخ سعد الدين الجباوي</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 mb-4">
+        <div class="col-lg-4 mb-4">
           <h5>معلومات الاتصال</h5>
           <ul class="footer-links">
             <li><i class="fas fa-map-marker-alt me-2"></i> قرية مسحرة، سوريا</li>
             <li><i class="fab fa-whatsapp me-2"></i> +963 998 440 194</li>
             <li><i class="fab fa-facebook me-2"></i> <a href="https://www.facebook.com/share/19Xak1veaQ/?mibextid=qi2Omg" target="_blank">صفحة الفيسبوك</a></li>
-            <li><i class="fas fa-clock me-2"></i> الأحد - الخميس: 8 صباحاً - 4 مساءً</li>
           </ul>
         </div>
       </div>
       <div class="copyright">
-        <p class="mb-0">&copy; 2025 نبض مسحرة. جميع الحقوق محفوظة. | من إعداد وتصميم عدان المصطفى</p>
+        <p class="mb-0">&copy; 2023 قرية مسحرة. جميع الحقوق محفوظة.</p>
       </div>
     </div>
   </footer>
   
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     // Progress bar
     window.addEventListener('scroll', function() {
@@ -1291,28 +809,13 @@
       });
     }
     
-    // Animate on scroll
-    function checkAnimation() {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      
-      elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
-        
-        if (elementPosition < screenPosition) {
-          element.classList.add('animated');
-        }
-      });
-    }
-    
-    // Prayer times calculation (simplified for demonstration)
+    // Prayer times calculation
     function calculatePrayerTimes() {
       const now = new Date();
       const hours = now.getHours();
       const minutes = now.getMinutes();
       
       // Simplified calculation for demonstration
-      // In a real application, you would use an API or complex calculation
       const times = {
         fajr: '04:32',
         sunrise: '05:47',
@@ -1372,7 +875,6 @@
       document.getElementById('gregorian-year').textContent = now.getFullYear();
       
       // Simplified Hijri date for demonstration
-      // In a real application, use a proper Hijri calendar library
       const hijriDate = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', {
         day: 'numeric',
         month: 'long',
@@ -1381,9 +883,9 @@
       }).format(now);
       
       document.getElementById('hijri-date').textContent = hijriDate;
-      document.getElementById('hijri-time').textContent = gregorianTime; // Same time as Gregorian
+      document.getElementById('hijri-time').textContent = gregorianTime;
       
-      // Extract Hijri day, month, year (simplified)
+      // Extract Hijri day, month, year
       const hijriParts = hijriDate.split(' ');
       document.getElementById('hijri-day').textContent = hijriParts[1];
       document.getElementById('hijri-month').textContent = hijriParts[2];
@@ -1395,23 +897,8 @@
     
     // Initialize
     window.addEventListener('load', function() {
-      // Start counters when stats section is visible
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCounters();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {threshold: 0.5});
-      
-      document.querySelectorAll('#stats').forEach(section => {
-        observer.observe(section);
-      });
-      
-      // Check animation on scroll
-      window.addEventListener('scroll', checkAnimation);
-      checkAnimation(); // Check on load
+      // Start counters
+      animateCounters();
       
       // Calculate and update prayer times
       calculatePrayerTimes();
@@ -1419,70 +906,6 @@
       // Update dates and time
       updateDates();
       setInterval(updateDates, 1000);
-      
-      // Initialize charts
-      // Family Distribution Chart
-      const familyCtx = document.getElementById('familyChart').getContext('2d');
-      const familyChart = new Chart(familyCtx, {
-        type: 'doughnut',
-        data: {
-          labels: ['آل الجباوي (45%)', 'آل القرشي (30%)', 'آل السعودي (15%)', 'عائلات أخرى (10%)'],
-          datasets: [{
-            data: [45, 30, 15, 10],
-            backgroundColor: [
-              '#1f3648',
-              '#c19b62',
-              '#d4af37',
-              '#5c7c9c'
-            ]
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'bottom',
-              rtl: true
-            },
-            title: {
-              display: false
-            }
-          }
-        }
-      });
-      
-      // Economy Chart
-      const economyCtx = document.getElementById('economyChart').getContext('2d');
-      const economyChart = new Chart(economyCtx, {
-        type: 'bar',
-        data: {
-          labels: ['الزراعة', 'التجارة', 'الصناعات التقليدية', 'الوظائف الحكومية'],
-          datasets: [{
-            label: 'النسبة المئوية',
-            data: [60, 20, 15, 5],
-            backgroundColor: '#c19b62'
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: 100,
-              ticks: {
-                callback: function(value) {
-                  return value + '%';
-                }
-              }
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            }
-          }
-        }
-      });
     });
     
     // Smooth scrolling for anchor links
